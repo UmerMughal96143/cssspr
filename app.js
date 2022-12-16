@@ -30,7 +30,7 @@ app.post("/balance", async (req, res) => {
   
   let { publicKey } = req.body;
   console.log("pk is ",publicKey)
-
+  return;
   const latestBlock = await client.getLatestBlockInfo();
   const root = await client.getStateRootHash(latestBlock.block.hash);
 
